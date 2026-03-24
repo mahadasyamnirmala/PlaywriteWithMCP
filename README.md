@@ -64,5 +64,5 @@ npx playwright show-report
 	• GitHub: https://github.com/mahadasyamnirmala/PlaywriteWithMCP: 🚀 Building a Fully Automated Testing Pipeline: From Test Plan to Jira Bugs
 
 ⭐ If you found this useful, consider giving it a star!
-<img width="892" height="2149" alt="image" src="https://github.com/user-attachments/assets/d06f4f81-8faf-46fb-8356-712b44412866" />
+
 
