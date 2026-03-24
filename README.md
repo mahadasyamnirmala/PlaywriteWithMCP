@@ -22,6 +22,6 @@ The most powerful piece of this pipeline: If a test fails in Playwright, our Jir
 
 Check out 
 
-demo folder
+demo folder and 
 Loginflow.md
  in the repo for a deeper dive into the automation setup!
