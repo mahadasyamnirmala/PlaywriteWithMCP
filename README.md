@@ -74,8 +74,11 @@ The goal is to eliminate manual effort in QA and build a scalable, intelligent t
 ▶️ How to Run
 
 npm install
+
 npx playwright test
+
 npx playwright show-report
+
 
 📌 Future Enhancements
 
@@ -85,7 +88,7 @@ npx playwright show-report
 
 🤝 Connect With Me
 
-	• LinkedIn: (your link)
+	• LinkedIn: https://www.linkedin.com/in/mahadasyamnirmalala/
 	• GitHub: https://github.com/mahadasyamnirmala/PlaywriteWithMCP: 🚀 Building a Fully Automated Testing Pipeline: From Test Plan to Jira Bugs
 
 ⭐ If you found this useful, consider giving it a star!
