@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VWO Test Execution Report - Invalid Logins</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f8fafc; 
+            color: #334155; 
+            margin: 0; 
+            padding: 40px 20px; 
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: #ffffff; 
+            padding: 30px 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); 
+        }
+        h1 { 
+            text-align: center; 
+            color: #1e293b; 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 15px; 
+            margin-bottom: 30px;
+        }
+        .summary { 
+            display: flex; 
+            justify-content: space-between; 
+            background: #f1f5f9; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+            border: 1px solid #e2e8f0;
+        }
+        .summary p { margin: 5px 0; font-size: 15px; }
+        .pass-text { color: #15803d; font-weight: 600; font-size: 18px; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 10px; 
+        }
+        th, td { 
+            padding: 15px; 
+            text-align: left; 
+            border-bottom: 1px solid #e2e8f0; 
+            vertical-align: top;
+        }
+        th { 
+            background-color: #6366f1; 
+            color: #ffffff; 
+            font-weight: 600; 
+        }
+        tr:hover { background-color: #f8fafc; }
+        .status-badge { 
+            display: inline-block; 
+            padding: 6px 12px; 
+            border-radius: 20px; 
+            color: white; 
+            font-size: 0.85em; 
+            font-weight: 600;
+        }
+        .status-pass { background-color: #22c55e; }
+        code {
+            background-color: #f1f5f9;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #0f172a;
+            word-break: break-all;
+        }
+        .error-text { 
+            color: #ef4444; 
+            font-size: 0.9em; 
+            display: block; 
+            margin-top: 6px; 
+            font-weight: 500;
+        }
+        .error-text::before {
+            content: "✖ ";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VWO Test Execution Report: Invalid Logins</h1>
+        
+        <div class="summary">
+            <div>
+                <p><strong>Environment:</strong> https://app.vwo.com/#/login</p>
+                <p><strong>Execution Date:</strong> 2026-03-23</p>
+            </div>
+            <div>
+                <p><strong>Total Scenarios Evaluated:</strong> 5</p>
+                <p><strong>Passed Scenarios:</strong> <span class="pass-text">5 / 5 (100%)</span></p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Test ID</th>
+                    <th>Scenario Description</th>
+                    <th width="30%">Input Evaluated (Email)</th>
+                    <th>Platform Validation Extracted</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TC-001</strong></td>
+                    <td>Arabic Login</td>
+                    <td><code>مستخدم@مثال.كوم</code></td>
+                    <td>
+                        <span class="error-text">Inline Error: "Invalid email"</span>
+                    </td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-002</strong></td>
+                    <td>Chinese Login</td>
+                    <td><code>测试@域名.公司</code></td>
+                    <td>
+                        <span class="error-text">Inline Error: "Invalid email"</span>
+                    </td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-003</strong></td>
+                    <td>Dummy Email</td>
+                    <td><code>dummy123456789xyz@dummy.com</code></td>
+                    <td>
+                        <span class="error-text">Inline Error: "Invalid email"</span>
+                    </td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-004</strong></td>
+                    <td>SQL Injection</td>
+                    <td><code>' OR 1=1 --</code></td>
+                    <td>
+                        <span class="error-text">Inline Error: "Invalid email"</span>
+                    </td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-005</strong></td>
+                    <td>Extreme Long String</td>
+                    <td><code>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa... (260+ chars) @domain.com</code></td>
+                    <td>
+                        <span class="error-text">Inline Error: "Invalid email"</span>
+                    </td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
