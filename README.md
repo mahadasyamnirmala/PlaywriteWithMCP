@@ -16,9 +16,11 @@ Playwright automatically runs through our test cases. It navigates to the login 
 
 📊 4. Custom HTML Reporting
 After execution, a custom HTML report is generated instantly. It provides a clean, interactive summary showing exact test results, traces, and screenshots of the execution run.
+<img width="1819" height="791" alt="image" src="https://github.com/user-attachments/assets/6ada2dd0-b80a-41c2-9ec5-64c4446c3cbf" />
 
 🐞 5. Automating Jira Bugs with MCP
 The most powerful piece of this pipeline: If a test fails in Playwright, our Jira Model Context Protocol (MCP) integration takes over. It automatically analyzes the failed test case and logs a highly detailed Bug Ticket into Jira, detailing the exact console logs and steps to reproduce. Zero manual bug logging required!
+<img width="1731" height="811" alt="image" src="https://github.com/user-attachments/assets/1af6457d-5992-44e0-960b-332e83e1c817" />
 
 Check out 
 
